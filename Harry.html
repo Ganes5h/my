@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Webpage</title>
+
+    <style>
+        /* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRbEpOO-Jd94itVsDa5jnBziAX04rDE9UUpgCJ_NkVJjUwrzI1LFtVJiRTFvnwY6wqbxo&usqp=CAU') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.85;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Clients Section */
+#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url("media.jpg " )no-repeat center center/cover;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.6;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+
+
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+
+
+.center{
+    text-align: center;
+}
+#photo{
+    height: 200px;
+}
+.certi{
+    text-decoration: none;
+    
+    color:#f55454
+
+}
+.certi:hover{
+    color:blue;
+}
+.client-item a{
+    text-decoration: none;
+    color:black;
+}
+.client-item a:hover{
+    color:white;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <nav id="navbar">
+        <div id="logo">
+            <img src="GK2.png" alt="Logo">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Education</a></li>
+            <li class="item"><a href="#services-container">Scores</a></li>
+            <li class="item"><a href="#client-section">Projects</a></li>
+            <li class="item"><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+
+    <section id="home">
+        <img id="photo"src="Ganesh.png" alt="Profile photo">
+        <h1 class="h-primary">Hello I'm Ganesh</h1>
+        <p>a Prorammer and Web Developer </p>
+        <p>The world of computers is growing at an un-recordable rate everyday, computers are the most influential tools in our lives, they are our present and future. In my opinion nothing on the planet can measure the exponential growth 
+            and excitement in the computing industry, and industry which I want to be a part of, particularly Software Engineering....</p>
+        
+    </section>
+
+
+    <section id="services-container">
+        <h1 class="h-primary center">My Skills</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeXAZkgU6BZlZkZmCr36o4x9TDOeTUuWcdsA&usqp=CAU" alt="">
+                <h2 class="h-secondary center">C/C++ Programming</h2>
+                <p class="center">C++ is a powerful general-purpose programming language. It can be used to develop operating systems, browsers, games, and so on. C++ supports different ways of programming like procedural,
+                     object-oriented, functional, and so on. This makes Me to master this language to improve my skills in Software domain</p>
+                     <br><a  class="certi" href="c++a.png">Certificate of Complition</a>
+            </div>
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxjbkb0x9-To-kNRwP4gNdkduA84gGMZIltw&usqp=CAU" alt="">
+                <h2 class="h-secondary center">Frontend Web Developer</h2>
+                <p class="center">I'm very passionate towards the web development,i love to design and structure the websites.HTML , CSS,JAVA-Script are the 
+                    important languages in this domain which i have learned and currentlly dealing with next part of it that is Bootstrap...
+                    .</p>
+                    <br><a  class="certi" href="css.png">Certificate of Complition</a>
+            </div>
+           
+        </div>
+    </section>
+
+
+    <section id="client-section">
+        <h2 class="h-primary center">Social Media</h2>
+        <div id="clients">
+            <div class="client-item">
+                <a href="https://www.instagram.com/kugajiganesh/?igshid=YmMyMTA2M2Y%3D">Instagram</a><br>
+               
+                
+            </div>
+            <div class="client-item">
+                <a href="https://www.linkedin.com/in/ganesh-kugaji-69483b244">Linked In</a><br>
+                
+            </div>
+          
+            <div class="client-item">
+                <a href="">Website</a><br>
+                
+            </div>
+            
+        </div>
+
+    </section>
+    
+</body>
+</html>
